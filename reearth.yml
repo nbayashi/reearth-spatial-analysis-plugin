@@ -1,0 +1,48 @@
+id: Spatial-Analysis-plugin
+name: Spatial Analysis widget
+version: 1.0.0
+extensions:
+  - id: spatialanalysis
+    type: widget
+    name: Spatial Analysis Widget
+    schema:
+      groups:
+        - id: default
+          fields:
+            - id: anaBuffer
+              type: bool
+              title: Buffer
+              defaultValue: true
+            - id: bufferfiletag
+              type: string
+              title: Buffer File tag
+              availableIf:
+                field: anaBuffer
+                type: bool
+                value: true
+            - id: anaDistance
+              type: bool
+              title: Distance
+              defaultValue: true
+            - id: distancefiletag
+              type: string
+              title: Distance File tag
+              availableIf:
+                field: anaDistance
+                type: bool
+                value: true
+            - id: anaConvex
+              type: bool
+              title: Convex
+              defaultValue: true
+            - id: convexfiletag
+              type: string
+              title: Convex File tag
+              availableIf:
+                field: anaCovex
+                type: bool
+                value: true
+    widgetLayout:
+      extendable:
+        horizontally: true
+        vertically: true
